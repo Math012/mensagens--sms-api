@@ -22,7 +22,7 @@ public class SmsMessageController {
         return ResponseEntity.ok(service.createMessage(smsMessageInDTO));
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<SmsMessageOutDTO> updateStatusMessage(@RequestParam("id")Long id,@RequestBody SmsMessageInDTO smsMessageInDTO){
         return ResponseEntity.ok(service.updateStatusMessage(id, smsMessageInDTO));
     }
